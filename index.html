@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Coretic | Clean Core specialist voor SAP en Neptune Software</title>
+<meta name="description" content="Coretic helpt organisaties hun SAP Clean Core-strategie uit te voeren met Neptune Software. SAP-ervaring sinds 2008, Neptune sinds 2013. Oisterwijk.">
+<link rel="canonical" href="https://www.coretic.nl/">
+<meta property="og:title" content="Coretic | Clean Core specialist">
+<meta property="og:description" content="Een schone SAP-kern, met innovatie ernaast in plaats van erin.">
+<meta property="og:url" content="https://www.coretic.nl/">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#001D45">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Coretic","url":"https://www.coretic.nl","email":"dave@coretic.nl","telephone":"+31619616681","address":{"@type":"PostalAddress","addressLocality":"Oisterwijk","addressCountry":"NL"},"description":"Clean Core advies, Neptune Software en softwareontwikkeling binnen en buiten SAP."}
+</script>
+<style>
+:root{
+  --bg:#F3F5F9; --surface:#FFFFFF; --ink:#001D45; --muted:#4A5872;
+  --line:#CDD5E1; --cobalt:#FF8D00; --accent-ink:#B35F00; --cobalt-soft:#FFE6C7; --core:#001D45; --core-text:#F3F5F9;
+  --todo:#FFF1B8; --todo-ink:#5C4A00;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#00122B; --surface:#0A2347; --ink:#E8EEF7; --muted:#9AAAC2; --line:#1F3B63;
+    --cobalt:#FF8D00; --accent-ink:#FFA53D; --cobalt-soft:#3A2A12; --core:#E8EEF7; --core-text:#00122B;
+    --todo:#4A3F12; --todo-ink:#FFE58A;
+  }
+}
+:root[data-theme="dark"]{
+    --bg:#00122B; --surface:#0A2347; --ink:#E8EEF7; --muted:#9AAAC2; --line:#1F3B63;
+    --cobalt:#FF8D00; --accent-ink:#FFA53D; --cobalt-soft:#3A2A12; --core:#E8EEF7; --core-text:#00122B;
+    --todo:#4A3F12; --todo-ink:#FFE58A;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;font-size:1.0625rem;line-height:1.6}
+img,svg{max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--cobalt);outline-offset:3px;border-radius:2px}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+.todo{background:var(--todo);color:var(--todo-ink);padding:0 .25em;border-radius:3px}
+
+/* header */
+header.site{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:68px;gap:1rem}
+.logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-weight:800;font-size:1.25rem;letter-spacing:-.02em}
+.logo img{display:block;height:40px;width:auto}
+nav.main ul{display:flex;gap:1.75rem;list-style:none;margin:0;padding:0}
+nav.main a{text-decoration:none;color:var(--muted);font-weight:500;font-size:.98rem}
+nav.main a:hover{color:var(--ink)}
+.btn{display:inline-block;text-decoration:none;font-weight:600;padding:.75rem 1.25rem;border-radius:6px;border:2px solid var(--ink);background:var(--ink);color:var(--bg);font:inherit;font-weight:600;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.small{padding:.5rem .9rem;font-size:.95rem}
+.menu-toggle{display:none;background:none;border:0;color:var(--ink);font:inherit;font-weight:600;cursor:pointer;padding:.5rem}
+@media (max-width:1180px){
+  nav.main{display:none;position:absolute;top:68px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line)}
+  nav.main.open{display:block}
+  nav.main ul{flex-direction:column;gap:0;padding:.5rem 1.25rem 1rem}
+  nav.main a{display:block;padding:.6rem 0;font-size:1.05rem}
+  .menu-toggle{display:block}
+  .bar .btn.small{display:none}
+}
+
+/* hero */
+.hero{padding:clamp(3rem,7vw,6rem) 0 clamp(2.5rem,5vw,4rem)}
+.hero .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.hero h1{font-size:clamp(2.3rem,5.2vw,4.1rem);line-height:1.03;letter-spacing:-.035em;font-weight:800;margin:0 0 1.5rem;max-width:14ch}
+.hero p.lead{font-size:1.2rem;color:var(--muted);max-width:52ch;margin:0 0 2rem}
+.ctas{display:flex;flex-wrap:wrap;gap:.75rem}
+.creds{margin-top:2.25rem;color:var(--muted);font-size:.98rem;max-width:52ch}
+.creds strong{color:var(--ink)}
+@media (max-width:860px){.hero .grid{grid-template-columns:1fr}}
+
+/* core diagram */
+.diagram{width:100%;height:auto}
+.diagram .ring{fill:none;stroke:var(--line);stroke-width:2;stroke-dasharray:4 6}
+.diagram .core{fill:var(--core)}
+.diagram .core-t{fill:var(--core-text);font-weight:700;font-size:17px}
+.diagram .core-s{fill:var(--core-text);opacity:.7;font-size:12px}
+.diagram .mod rect{fill:var(--cobalt-soft);stroke:var(--cobalt);stroke-width:2}
+.diagram .mod text{fill:var(--ink);font-size:13px;font-weight:600}
+.diagram .link{stroke:var(--cobalt);stroke-width:2}
+.diagram .api{fill:var(--muted);font-size:12px}
+@media (prefers-reduced-motion:no-preference){
+  .diagram .mod{opacity:0;animation:dock .7s cubic-bezier(.2,.8,.2,1) forwards}
+  .diagram .mod:nth-of-type(1){animation-delay:.25s;--dx:-30px}
+  .diagram .mod:nth-of-type(2){animation-delay:.45s;--dx:30px}
+  .diagram .mod:nth-of-type(3){animation-delay:.65s;--dx:-30px}
+  .diagram .mod:nth-of-type(4){animation-delay:.85s;--dx:30px}
+  @keyframes dock{from{opacity:0;transform:translateX(var(--dx))}to{opacity:1;transform:none}}
+}
+
+
+/* hero: always dark, brand navy with circuit motion */
+.hero{position:relative;overflow:hidden;background:#001D45;color:#F3F5F9}
+.hero-media{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55;filter:saturate(1.1)}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(100deg,rgba(0,29,69,.96) 0%,rgba(0,29,69,.82) 45%,rgba(0,29,69,.35) 100%)}
+.hero .grid{position:relative;z-index:2}
+.hero p.lead{color:#C6D2E6}
+.hero .creds{color:#C6D2E6}
+.hero .creds strong{color:#FFFFFF}
+.hero .btn{background:#FF8D00;border-color:#FF8D00;color:#001D45}
+.hero .btn.ghost{background:transparent;border-color:#F3F5F9;color:#F3F5F9}
+.hero :focus-visible{outline-color:#FF8D00}
+.hero .diagram .ring{stroke:rgba(243,245,249,.35)}
+.hero .diagram .core{fill:#F3F5F9}
+.hero .diagram .core-t,.hero .diagram .core-s{fill:#001D45}
+.hero .diagram .mod rect{fill:rgba(0,29,69,.85);stroke:#FF8D00}
+.hero .diagram .mod text{fill:#F3F5F9}
+.hero .diagram .link{stroke:#FF8D00}
+.hero .diagram .api{fill:#C6D2E6}
+@media (prefers-reduced-motion:reduce){.hero-media{display:none}.hero{background:#001D45 url(assets/hero-poster.jpg) center/cover}}
+
+/* sections */
+section.block{padding:clamp(3.5rem,7vw,6rem) 0;border-top:1px solid var(--line)}
+section.block h2{font-size:clamp(1.75rem,3.4vw,2.6rem);line-height:1.1;letter-spacing:-.025em;margin:0 0 1.25rem;max-width:22ch}
+.intro{color:var(--muted);max-width:62ch;margin:0 0 2.5rem;font-size:1.1rem}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem)}
+@media (max-width:760px){.two{grid-template-columns:1fr}}
+.prose p{max-width:62ch;margin:0 0 1rem}
+
+/* steps: a real sequence */
+ol.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--ink)}
+ol.steps li{padding:1.5rem 1.5rem 0 0;counter-increment:s}
+ol.steps li::before{content:counter(s);display:block;font-weight:800;font-size:2.4rem;line-height:1;color:var(--accent-ink);margin-bottom:.75rem}
+ol.steps h3{margin:0 0 .5rem;font-size:1.2rem}
+ol.steps p{margin:0;color:var(--muted)}
+@media (max-width:760px){ol.steps{grid-template-columns:1fr}ol.steps li{padding-right:0;padding-bottom:1rem}}
+
+/* services */
+.services{border-top:2px solid var(--ink)}
+.services details{border-bottom:1px solid var(--line)}
+.services summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:baseline;padding:1.25rem 0}
+.services summary::-webkit-details-marker{display:none}
+.services summary h3{margin:0;font-size:1.3rem;letter-spacing:-.01em}
+.services summary span{color:var(--muted);font-size:.98rem}
+.services summary::after{content:"+";grid-column:2;grid-row:1;font-size:1.6rem;line-height:1;color:var(--accent-ink);font-weight:500}
+.services details[open] summary::after{content:"−"}
+.services summary span{grid-column:1}
+.services .body{padding:0 0 1.5rem;max-width:64ch}
+.services .body p{margin:0 0 .75rem}
+
+/* about */
+.portrait{aspect-ratio:4/5;background:var(--surface);border:1px solid var(--line);border-radius:6px;display:grid;place-items:center;color:var(--muted);text-align:center;padding:1rem}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:.4rem 1.25rem;margin:1.5rem 0 0;padding:1.25rem 0 0;border-top:1px solid var(--line)}
+.facts dt{font-weight:700}
+.facts dd{margin:0;color:var(--muted)}
+
+/* cases */
+.cases{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.case{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--cobalt);border-radius:4px;padding:1.5rem}
+.case h3{margin:0 0 .5rem;font-size:1.15rem}
+.case p{margin:0 0 .5rem;color:var(--muted)}
+@media (max-width:760px){.cases{grid-template-columns:1fr}}
+
+/* work */
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:clamp(1.5rem,3vw,2.25rem)}
+.panel h3{margin:0 0 .5rem;font-size:1.3rem}
+.panel p{color:var(--muted);margin:0 0 1.25rem}
+
+/* contact */
+form{display:grid;gap:1rem}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media (max-width:520px){.row{grid-template-columns:1fr}}
+label{display:grid;gap:.35rem;font-weight:600;font-size:.95rem}
+input,textarea{font:inherit;font-weight:400;color:var(--ink);background:var(--surface);border:1.5px solid var(--line);border-radius:5px;padding:.7rem .8rem;width:100%}
+input:focus,textarea:focus{border-color:var(--cobalt);outline:none}
+textarea{min-height:140px;resize:vertical}
+.hp{position:absolute;left:-9999px}
+.status{min-height:1.5em;font-weight:600}
+.status.ok{color:var(--accent-ink)}
+.direct{font-size:1.1rem}
+.direct a{font-weight:600}
+
+footer{border-top:1px solid var(--line);padding:2rem 0 2.5rem;color:var(--muted);font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
+footer p{margin:0}
+
+.post-head{padding:clamp(3rem,6vw,5rem) 0 1.5rem}
+.post-head h1{font-size:clamp(2rem,4.4vw,3.2rem);line-height:1.08;letter-spacing:-.03em;margin:0 0 1rem;max-width:22ch}
+.meta{color:var(--muted);margin:0}
+.article{max-width:68ch;padding-bottom:4rem}
+.article h2{font-size:1.45rem;letter-spacing:-.015em;margin:2.25rem 0 .75rem}
+.article p,.article li{max-width:66ch}
+.article ul{padding-left:1.25rem}
+.article li{margin:.25rem 0}
+.article .tags{color:var(--muted);margin-top:2rem}
+.article .cta{margin-top:2.5rem;padding:1.5rem;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--cobalt);border-radius:4px}
+.article .cta p{margin:0 0 1rem}
+.postlist{border-top:2px solid var(--ink);margin:0;padding:0;list-style:none}
+.postlist li{border-bottom:1px solid var(--line);padding:1.5rem 0}
+.postlist h2,.postlist h3{margin:0 0 .4rem;font-size:1.35rem;letter-spacing:-.01em}
+.postlist h2 a,.postlist h3 a{text-decoration:none}
+.postlist h2 a:hover,.postlist h3 a:hover{color:var(--cobalt)}
+.postlist p{margin:0;color:var(--muted);max-width:66ch}
+.postlist .meta{font-size:.95rem;margin-bottom:.35rem}
+.portrait-img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:6px}
+/* ===== responsive refinements ===== */
+body{font-size:clamp(1rem,.94rem + .22vw,1.125rem)}
+.wrap{width:min(1320px,100% - clamp(2.5rem,7vw,9rem))}
+.cta-short{display:none}
+.bar{gap:1.25rem}
+.hero{min-height:min(86vh,880px);display:flex;align-items:center}
+.hero .grid{grid-template-columns:1.1fr 1fr;width:min(1320px,100% - clamp(2.5rem,7vw,9rem))}
+.hero h1{font-size:clamp(2.2rem,1.1rem + 4.2vw,4.9rem);max-width:15ch}
+.hero .diagram{width:100%;max-width:620px;justify-self:end}
+.article h3{font-size:1.1rem;margin:1.5rem 0 .4rem}
+@media (min-width:1100px){
+  .split{display:grid;grid-template-columns:minmax(260px,1fr) 2fr;gap:clamp(2.5rem,5vw,6rem);align-items:start}
+  .split-head{position:sticky;top:calc(env(safe-area-inset-top,0px) + 100px)}
+  .split-head .intro{margin-bottom:0}
+}
+@media (min-width:1500px){
+  .cases{grid-template-columns:repeat(2,1fr);gap:2rem}
+  section.block{padding:clamp(5rem,7vw,7.5rem) 0}
+}
+nav.main a{white-space:nowrap}
+@media (max-width:1180px){
+  .bar .btn.small{display:inline-block;order:2;margin-left:auto;padding:.45rem .8rem}
+  .menu-toggle{order:3;padding:.5rem .25rem}
+  .cta-long{display:none}.cta-short{display:inline}
+}
+@media (max-width:860px){
+  .hero{min-height:0;display:block}
+  .hero .grid{grid-template-columns:1fr;margin-inline:auto}
+  .hero .diagram{justify-self:center;max-width:480px}
+}
+@media (max-width:640px){
+  .bar{height:60px}
+  .logo img{height:34px}
+  nav.main{top:60px}
+  section.block{padding:3rem 0}
+  .hero{padding:2.5rem 0 3rem}
+  .hero h1{font-size:clamp(2.1rem,9.5vw,2.7rem);margin-bottom:1.1rem}
+  .hero p.lead{font-size:1.06rem;margin-bottom:1.5rem}
+  .creds{margin-top:1.75rem;font-size:.95rem}
+  .ctas{flex-direction:column}
+  .ctas .btn,.panel .btn,form .btn,.article .cta .btn{width:100%;text-align:center}
+  .diagram .mod text{font-size:13.5px}
+  .two{gap:1rem}
+  .diagram .api{font-size:13px}
+  section.block h2{font-size:clamp(1.6rem,7vw,2rem)}
+  .intro{margin-bottom:1.75rem;font-size:1.02rem}
+  .services summary{padding:1rem 0}
+  .services summary h3{font-size:1.15rem}
+  .portrait-img{max-width:420px}
+  .facts{grid-template-columns:auto 1fr}
+  .panel{padding:1.35rem}
+  footer .wrap{flex-direction:column;gap:.6rem}
+  footer a{display:inline-block;padding:.3rem 0}
+  .post-head h1{font-size:clamp(1.75rem,8vw,2.3rem)}
+}
+@media print{header.site,footer,.hero-media{display:none}.article a[onclick]{display:none}}
+.contact-actions{display:flex;flex-wrap:wrap;gap:.75rem}@media (max-width:640px){.contact-actions .btn{width:100%;text-align:center}}</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="Coretic, naar boven">
+      <picture><source srcset="assets/logo-light.png" media="(prefers-color-scheme: dark)"><img src="assets/logo.png" alt="Coretic, Clean Core Specialist" width="126" height="40"></picture>
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="main" id="nav" aria-label="Hoofdmenu">
+      <ul>
+        <li><a href="#aanpak">Aanpak</a></li>
+        <li><a href="#diensten">Diensten</a></li>
+        <li><a href="#over">Over Coretic</a></li>
+        <li><a href="#werken">Projecten en werken bij</a></li>
+        <li><a href="blog/index.html">Blog</a></li>
+      </ul>
+    </nav>
+    <a class="btn small" href="#contact"><span class="cta-long">Plan een kennismaking</span><span class="cta-short">Contact</span></a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <video class="hero-media" autoplay muted loop playsinline poster="assets/hero-poster.jpg" aria-hidden="true"><source src="assets/hero.mp4" type="video/mp4"></video>
+    <div class="wrap grid">
+      <div>
+        <h1>Een schone SAP&#8209;kern. Innovatie ernaast, niet erin.</h1>
+        <p class="lead">Coretic helpt organisaties hun Clean Core-strategie echt uit te voeren. We bouwen extensies met Neptune Software, versneld met AI, zodat je S/4HANA upgradebaar blijft en maatwerk niet stilletjes terugkomt.</p>
+        <div class="ctas">
+          <a class="btn" href="#contact">Plan een kennismaking</a>
+          <a class="btn ghost" href="#diensten">Bekijk de diensten</a>
+        </div>
+        <p class="creds">Opgericht door een specialist die <strong>sinds 2008 met SAP</strong> en <strong>sinds 2013 met Neptune Software</strong> werkt. Gevestigd in Oisterwijk, actief in heel Nederland.</p>
+      </div>
+      <svg class="diagram" viewBox="0 0 440 380" role="img" aria-labelledby="dtitle">
+        <title id="dtitle">Schema: de SAP-kern blijft standaard, extensies koppelen erbuiten via API's</title>
+        <circle class="ring" cx="220" cy="190" r="118"/>
+        <text class="api" x="220" y="62" text-anchor="middle">released API's</text>
+        <line class="link" x1="148" y1="190" x2="102" y2="118"/>
+        <line class="link" x1="292" y1="190" x2="338" y2="118"/>
+        <line class="link" x1="148" y1="210" x2="102" y2="272"/>
+        <line class="link" x1="292" y1="210" x2="338" y2="272"/>
+        <rect class="core" x="140" y="140" width="160" height="100" rx="8"/>
+        <text class="core-t" x="220" y="186" text-anchor="middle">SAP S/4HANA</text>
+        <text class="core-s" x="220" y="206" text-anchor="middle">standaard, upgradebaar</text>
+        <g class="mod"><rect x="10" y="92" width="140" height="44" rx="6"/><text x="80" y="119" text-anchor="middle">Neptune DX-apps</text></g>
+        <g class="mod"><rect x="290" y="92" width="140" height="44" rx="6"/><text x="360" y="119" text-anchor="middle">AI-agents</text></g>
+        <g class="mod"><rect x="10" y="252" width="140" height="44" rx="6"/><text x="80" y="279" text-anchor="middle">Mobiel en offline</text></g>
+        <g class="mod"><rect x="290" y="252" width="140" height="44" rx="6"/><text x="360" y="279" text-anchor="middle">Workflows</text></g>
+      </svg>
+    </div>
+  </section>
+
+  <section class="block" id="probleem">
+    <div class="wrap two">
+      <h2>Clean Core strandt vaak na de presentatie</h2>
+      <div class="prose">
+        <p>Bijna elke SAP-organisatie wil een schone kern. In de praktijk komt het maatwerk toch terug: er moet snel iets gebouwd worden, er staat geen alternatief klaar, en niemand bewaakt de afspraken.</p>
+        <p>Coretic levert beide kanten. Een platform om buiten de kern te bouwen, en de governance die ervoor zorgt dat het zo blijft.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="aanpak">
+    <div class="wrap">
+      <h2>Zo pakken we het aan</h2>
+      <p class="intro">Van een bestaand landschap vol maatwerk naar een kern die standaard blijft, in drie stappen.</p>
+      <ol class="steps">
+        <li><h3>In kaart brengen</h3><p>We analyseren je huidige maatwerk: wat kan weg, wat kan terug naar standaard, en wat hoort in een extensie.</p></li>
+        <li><h3>Ontwerpen</h3><p>Per extensie kiezen we de juiste oplossing, van Neptune DX-app tot maatwerk buiten SAP, met heldere regels voor integratie via released API's.</p></li>
+        <li><h3>Bouwen en borgen</h3><p>We bouwen de oplossingen, dragen ze over en leggen ontwikkelrichtlijnen en reviews vast, zodat de kern ook na ons vertrek schoon blijft.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block" id="diensten">
+    <div class="wrap">
+      <div class="split"><div class="split-head">
+      <h2>Diensten</h2>
+      <p class="intro">Advies, architectuur en ontwikkeling, voor een afgebakend project of een langer traject.</p>
+      </div>
+      <div class="services">
+        <details open>
+          <summary><h3>Clean Core Advies</h3><span>Strategie, maatwerkanalyse en governance</span></summary>
+          <div class="body"><p>We beoordelen je SAP-landschap tegen de Clean Core-principes en maken een concreet plan: welk maatwerk verdwijnt, wat verhuist naar een extensie en welke afspraken nodig zijn om terugval te voorkomen.</p></div>
+        </details>
+        <details>
+          <summary><h3>Solution Architecture</h3><span>De juiste oplossing op de juiste plek</span></summary>
+          <div class="body"><p>We ontwerpen de architectuur rond je SAP-kern: welke functionaliteit waar draait, hoe systemen koppelen en hoe je dat beheersbaar houdt.</p></div>
+        </details>
+        <details>
+          <summary><h3>Agentic Development (SAP en non-SAP)</h3><span>Softwareontwikkeling, versneld met AI-agents</span></summary>
+          <div class="body"><p>We ontwikkelen software binnen en buiten SAP: apps, integraties en maatwerkoplossingen. Daarbij zetten we AI-agents in die afgebakende taken uitvoeren, zoals code schrijven, testen en documenteren. Met MCP-servers ontsluiten we SAP-data en -functies veilig voor AI-agents en -assistenten, via API's en zonder de kern aan te passen. Zo lever je sneller op, terwijl een ervaren ontwikkelaar elke stap controleert en de kwaliteit bewaakt.</p></div>
+        </details>
+        <details>
+          <summary><h3>Neptune Software Consultancy</h3><span>Apps bouwen op het Neptune DX Platform</span></summary>
+          <div class="body"><p>Ontwerp en ontwikkeling van Neptune-apps voor desktop, mobiel en offline gebruik, direct gekoppeld aan SAP. Met Neptune-ervaring sinds 2013 weten we wat het platform goed doet en waar de valkuilen zitten.</p><p><a href="neptune-dxp.html">Meer over Neptune DXP</a></p></div>
+        </details>
+        <details>
+          <summary><h3>Neptune Support</h3><span>Beheer en doorontwikkeling van bestaande apps</span></summary>
+          <div class="body"><p>Heb je al Neptune-apps in productie? We nemen beheer, upgrades en doorontwikkeling over, of ondersteunen je eigen team.</p></div>
+        </details>
+      </div></div>
+    </div>
+  </section>
+
+  <!-- CASES: tijdelijk verborgen tot er cases zijn. Verwijder deze commentaarregels om de sectie terug te zetten.
+  <section class="block" id="cases">
+    <div class="wrap">
+      <h2>Wat we hebben opgeleverd</h2>
+      <p class="intro">Een greep uit recente trajecten.</p>
+      <div class="cases">
+        <article class="case">
+          <h3><span class="todo">[Case 1: sector en type organisatie]</span></h3>
+          <p><span class="todo">[Uitgangssituatie: welk probleem had de klant?]</span></p>
+          <p><span class="todo">[Wat heeft Coretic gedaan, met welk platform?]</span></p>
+          <p><span class="todo">[Resultaat, liefst meetbaar]</span></p>
+        </article>
+        <article class="case">
+          <h3><span class="todo">[Case 2: sector en type organisatie]</span></h3>
+          <p><span class="todo">[Uitgangssituatie]</span></p>
+          <p><span class="todo">[Aanpak]</span></p>
+          <p><span class="todo">[Resultaat]</span></p>
+        </article>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <section class="block" id="over">
+    <div class="wrap two">
+      <img class="portrait-img" src="assets/dave.jpg" alt="Dave van de Ven, oprichter van Coretic" width="640" height="800" loading="lazy">
+      <div class="prose">
+        <h2>Je werkt direct met de specialist</h2>
+        <p>Coretic is opgericht door Dave van de Ven. Hij kent SAP van alle kanten: tien jaar stond hij bij modeketen The Sting aan de klantkant, van SAP-procesmanager tot ABAP- en Neptune-ontwikkelaar. Daarna bouwde hij bij Aiden ruim zeven jaar de business unit Intelligent Automation (SAP App Dev) op en leidde die, terwijl hij zelf als Neptune-architect bij klanten bleef werken.</p>
+        <p>Die combinatie van gebruiker, bouwer en manager zit in elk Coretic-traject. Bij Coretic praat je niet met een accountmanager, maar met degene die het werk doet.</p>
+        <dl class="facts">
+          <dt>SAP</dt><dd>Sinds 2008</dd>
+          <dt>Neptune</dt><dd>Sinds 2013</dd>
+          <dt>Certificeringen</dt><dd>Gecertificeerd Neptune-partner</dd>
+          <dt>Vestiging</dt><dd>Oisterwijk</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="werken">
+    <div class="wrap">
+      <h2>Projecten en werken bij Coretic</h2>
+      <div class="two">
+        <div class="panel">
+          <h3>Specialist nodig voor je project?</h3>
+          <p>Coretic zet consultants in op projectbasis, van een afgebakende klus tot een langer traject. Vertel ons welke kennis en welk resultaat je zoekt.</p>
+          <a class="btn ghost" href="#contact">Vraag beschikbaarheid aan</a>
+        </div>
+        <div class="panel">
+          <h3>Bouw mee aan Coretic</h3>
+          <p>Coretic groeit en zoekt SAP- en AI-specialisten die liever bouwen dan presenteren. Interesse? Stuur een bericht, ook als er geen vacature openstaat.</p>
+          <a class="btn ghost" href="mailto:dave@coretic.nl?subject=Werken%20bij%20Coretic">Mail Dave</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="blog">
+    <div class="wrap">
+      <div class="split"><div class="split-head"><h2>Uit de blog</h2><p style="margin-top:1.5rem"><a href="blog/index.html">Alle artikelen</a></p></div><ul class="postlist"><li><p class="meta"><time datetime="2025-12-31">31 december 2025</time></p><h3><a href="blog/neptune-software-fusion-coding-sap.html">Neptune Software als versneller van fusion coding binnen SAP</a></h3><p>Waarom fusion coding terrein wint en hoe Neptune Software en SAP BTP samen zorgen voor snelle, Clean Core-proof innovatie.</p></li><li><p class="meta"><time datetime="2025-12-22">22 december 2025</time></p><h3><a href="blog/clean-core-sap-neptune-deel-1.html">Clean Core in SAP: met Neptune naar echte innovatie (deel 1)</a></h3><p>Wat een Clean Core-strategie inhoudt en waarom side-by-side extensies met Neptune Software en SAP BTP de basis zijn voor toekomstbestendig ERP.</p></li></ul></div>
+    </div>
+  </section>
+
+  <section class="block" id="contact">
+    <div class="wrap two">
+      <div class="prose">
+        <h2>Plan een kennismaking</h2>
+        <p>Vertel kort waar je staat met Clean Core of welke oplossing je zoekt, dan plannen we een kennismaking.</p>
+      </div>
+      <div class="panel contact-panel">
+        <h3>Neem direct contact op</h3>
+        <p>Mail of bel Dave. Je krijgt binnen één werkdag antwoord.</p>
+        <div class="contact-actions">
+          <a class="btn" href="mailto:dave@coretic.nl?subject=Kennismaking%20Coretic">Mail dave@coretic.nl</a>
+          <a class="btn ghost" href="tel:+31619616681">Bel 06 19 61 66 81</a>
+        </div>
+      </div>
+      <!-- CONTACTFORMULIER: tijdelijk verborgen. Haal deze commentaarregels weg om het terug te zetten (werkt op Netlify).
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="website" id="contactForm">
+        <input type="hidden" name="form-name" value="contact">
+        <label class="hp">Niet invullen <input name="website" tabindex="-1" autocomplete="off"></label>
+        <div class="row">
+          <label>Naam <input name="naam" required autocomplete="name"></label>
+          <label>Organisatie <input name="organisatie" autocomplete="organization"></label>
+        </div>
+        <label>E-mailadres <input type="email" name="email" required autocomplete="email"></label>
+        <label>Bericht <textarea name="bericht" required></textarea></label>
+        <div><button class="btn" type="submit">Verstuur bericht</button></div>
+        <p class="status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+      -->
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Coretic, een handelsnaam van DVN Technology B.V.</p>
+    <p>KvK 99083523, btw-id NL868787255B01</p>
+    <p><a href="privacy.html">Privacy- en cookiebeleid</a>, <a href="voorwaarden.html">Algemene voorwaarden</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var t=document.querySelector('.menu-toggle'), n=document.getElementById('nav');
+  t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o);t.textContent=o?'Sluiten':'Menu'});
+  n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.remove('open');t.setAttribute('aria-expanded','false');t.textContent='Menu'}});
+
+  var f=document.getElementById('contactForm'), s=document.getElementById('formStatus');
+  if(f) f.addEventListener('submit',function(e){
+    e.preventDefault();
+    s.className='status'; s.textContent='Bericht wordt verstuurd…';
+    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
+      .then(function(r){ if(!r.ok) throw new Error(); f.reset(); s.className='status ok'; s.textContent='Bericht verstuurd. Je hoort binnen één werkdag van ons.'; })
+      .catch(function(){ s.textContent='Versturen is niet gelukt. Mail je bericht naar dave@coretic.nl.'; });
+  });
+})();
+</script>
+</body>
+</html>
